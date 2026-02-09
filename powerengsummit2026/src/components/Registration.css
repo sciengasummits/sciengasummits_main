@@ -1,0 +1,95 @@
+.registration-section {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+}
+
+.registration-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.registration-intro {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.registration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.registration-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #e0e0e0;
+}
+
+.registration-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: #2196F3;
+}
+
+.registration-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.registration-name {
+  font-size: 1.6rem;
+  color: #1a5490;
+  margin-bottom: 25px;
+}
+
+.registration-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.registration-features li {
+  padding: 10px 0;
+  color: #666;
+  font-size: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.registration-features li:last-child {
+  border-bottom: none;
+}
+
+.registration-note {
+  font-size: 0.95rem;
+  color: #4CAF50;
+  font-weight: 600;
+  margin: 0;
+}
+
+.registration-cta {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.registration-footer {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .registration-grid {
+    grid-template-columns: 1fr;
+  }
+}

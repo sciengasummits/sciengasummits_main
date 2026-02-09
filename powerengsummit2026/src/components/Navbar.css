@@ -1,0 +1,198 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 32, 39, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 15px 0;
+}
+
+.navbar-scrolled {
+  background: rgba(15, 32, 39, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
+  transition: width 0.3s;
+}
+
+.navbar-link:hover {
+  color: #2196F3;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar-button {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #2196F3 0%, #4CAF50 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.navbar-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: white;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.hamburger.active {
+  background: transparent;
+}
+
+.hamburger.active::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburger.active::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+@media (max-width: 968px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 32, 39, 0.98);
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-menu.active {
+    transform: translateX(0);
+  }
+
+  .navbar-item {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-link::after {
+    display: none;
+  }
+
+  .navbar-cta {
+    border-bottom: none;
+    padding-top: 25px;
+  }
+}
