@@ -1,0 +1,12 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #1e40af;
+  --bg: #ffffff;
+  --text: #1f2937;
+  --light-text: #6b7280;
+  --brand-gradient: linear-gradient(135deg, #00ffff 0%, #0000ff 100%);
+  --brand: #2563eb;
+  /* Alias for compatibility */
+  --muted: #6b7280;
+  /* Alias for compatibility */
+}
